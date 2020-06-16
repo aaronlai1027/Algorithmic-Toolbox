@@ -4,6 +4,14 @@ import sys
 def optimal_summands(n):
     summands = []
     #write your code here
+    candy = 1
+    candyLeft = n
+    while candyLeft >= candy:
+        summands.append(candy)
+        candyLeft -= candy
+        candy += 1
+    summands[-1] = summands[-1] + candyLeft
+
     return summands
 
 if __name__ == '__main__':
